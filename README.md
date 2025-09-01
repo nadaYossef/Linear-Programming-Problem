@@ -102,7 +102,3 @@ $$
 * Provides **graphical visualization** of feasible regions and solutions for 2D problems.
 * Full **Simplex algorithm** implementation with support for slack, surplus, and artificial variables.
 * **Step-by-step tableau updates** displayed for clarity and transparency.
-
----
-
-Would you like me to also prepare a **screenshots naming guide** (like “graphical\_constraints.png should be the one with only lines and shaded region”) so you can easily match your captured outputs to the placeholders?
