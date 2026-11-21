@@ -24,6 +24,8 @@ In the sidebar, choose a method and whether to maximize or minimize. Enter the n
 
 Minimize `2x₁ + 3x₂` subject to `x₁ + x₂ ≥ 6`, `2x₁ + x₂ ≥ 7`, and `x₁ + 4x₂ ≥ 8`. The optimum is **x₁ = 5⅓, x₂ = ⅔**, with **Z ≈ 12.67**. The app plots the feasible corner points and highlights the optimum.
 
+![Optimal point from the verified Streamlit run](linear-optimal-plot.svg)
+
 ### Simplex maximization
 
 Maximize `2x₁ + 4x₂ + x₃ + x₄` subject to these constraints.
