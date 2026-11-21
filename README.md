@@ -24,7 +24,7 @@ In the sidebar, choose a method and whether to maximize or minimize. Enter the n
 
 Minimize `2x₁ + 3x₂` subject to `x₁ + x₂ ≥ 6`, `2x₁ + x₂ ≥ 7`, and `x₁ + 4x₂ ≥ 8`. The optimum is **x₁ = 5⅓, x₂ = ⅔**, with **Z ≈ 12.67**. The app plots the feasible corner points and highlights the optimum.
 
-![Optimal point from the verified Streamlit run](linear-optimal-plot.svg)
+![Optimal point from the worked graphical example](linear-optimal-plot.svg)
 
 ### Simplex maximization
 
@@ -38,4 +38,19 @@ Maximize `2x₁ + 4x₂ + x₃ + x₄` subject to these constraints.
 
 The optimum is **(1, 1, 0.5, 0)**, with **Z = 6.50**.
 
-Both examples returned the same objective values in Streamlit interaction tests and an independent SciPy solve. The graphical plot uses a finite viewing window. These examples cover one bounded problem per method.
+The objective values above agree with an independent SciPy solve. The graphical plot uses a finite viewing window. These examples cover one bounded problem per method.
+
+## Reading the results
+
+The graphical view draws each constraint boundary, shades the feasible region within the plot, and evaluates feasible intersections against the objective. The simplex view shows the initial tableau, the entering and leaving variables at each pivot, and the resulting variable values. The app uses the Big-M approach when artificial variables are needed.
+
+Enter each variable's coefficient in the same order throughout. For example, enter `1, 0, 4, 1` for an expression with no second-variable term. The app assumes all decision variables are nonnegative and normalizes constraints with negative right-hand sides before solving.
+
+| Repository item | Purpose |
+| --- | --- |
+| `app (1).py` | Streamlit interface and both solvers |
+| `Graphical Method/` | Supplementary graphical-method material |
+| `Simplex methods/` | Supplementary simplex-method material |
+| `linear-optimal-plot.svg` | Plot for the graphical minimization example above |
+
+This is an educational solver. The graphical plot has a fixed viewing range derived from the input constraints, and floating-point arithmetic and Big-M scaling can affect numerical behavior. Check feasibility and the original objective when interpreting a new result.
