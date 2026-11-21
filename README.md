@@ -40,6 +40,8 @@ The optimum is **(1, 1, 0.5, 0)**, with **Z = 6.50**.
 
 The objective values above agree with an independent SciPy solve. The graphical plot uses a finite viewing window. These examples cover one bounded problem per method.
 
+![Simplex final solution](Simplex%20methods/7.png)
+
 ## Reading the results
 
 The graphical view draws each constraint boundary, shades the feasible region within the plot, and evaluates feasible intersections against the objective. The simplex view shows the initial tableau, the entering and leaving variables at each pivot, and the resulting variable values. The app uses the Big-M approach when artificial variables are needed.
